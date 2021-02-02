@@ -8,7 +8,6 @@ function App() {
       method: 'get',
       url: 'https://backic.azurewebsites.net/getdata',
       headers: { 
-        '': '', 
         'Cookie': 'ARRAffinity=c228d005896ab37d8c410789119641a5a5a86af4143695c1ab7878064c764896; ARRAffinitySameSite=c228d005896ab37d8c410789119641a5a5a86af4143695c1ab7878064c764896'
       }
     };
