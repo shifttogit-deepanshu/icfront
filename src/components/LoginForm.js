@@ -20,10 +20,9 @@ const LoginForm = (props)=>{
 
         axios(config)
         .then(function (response) {
-        console.log(JSON.stringify(response.data));
+        console.log(response.data);
         })
         .catch(function (error) {
-            console.log("gkfhklfjgdkfjg error ererooer")
         console.log(error);
         });
 
