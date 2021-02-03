@@ -1,5 +1,7 @@
 import React,{useState} from "react"
 import axios from "axios"
+import { connect } from 'react-redux'
+import {setuid} from "../store/actions/user"
 
 const LoginForm = (props)=>{
     const [username,setUsername] = useState('')
@@ -21,14 +23,17 @@ const LoginForm = (props)=>{
         axios(config)
         .then(function (response) {
         console.log(response.data);
+        props.setuid(response.data.uid)
         })
         .catch(function (error) {
         console.log(error);
+        props.setuid(-1)
         });
 
       }
 
     return (
+        <div>
         <form>
         <label>
             username:
@@ -40,6 +45,22 @@ const LoginForm = (props)=>{
         </label>
         <input type="submit" value="Submit" onClick={(e)=>handleSubmit(e)}/>
         </form>
+        {props.uid===0 && <div>Please Login To continue</div>}
+        {props.uid===-1 && <div>Auth failed Please check credentials and try again</div>}
+        {(props.uid!==0 && props.uid!==-1) && <div>Authenticated!!</div>}
+        </div>
     )
 }
-export default LoginForm
+
+const mapStateToProps = (state)=>{
+    return ({
+        uid:state.users.uid
+    })
+}
+
+const mapDispatchToProps = (dispatch)=>{
+    return ({
+        setuid: (uid)=>dispatch(setuid(uid))
+    })
+}
+export default connect(mapStateToProps,mapDispatchToProps)(LoginForm)
