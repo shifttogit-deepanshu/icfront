@@ -55,7 +55,7 @@ const App = (props)=>{
  
   return (
     <div>
-    <LoginForm />
+{(props.uid===0 || props.uid===-1) && <LoginForm /> }    
     {props.uid===0 && <div>Please Login To continue</div>}
         {props.uid===-1 && <div>Auth failed Please check credentials and try again</div>}
         {(props.uid!==0 && props.uid!==-1) && <div><div>Authenticated!!</div><div><GetContainers/></div></div>}

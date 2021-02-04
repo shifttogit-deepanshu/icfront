@@ -3,7 +3,20 @@ import axios from "axios"
 
 const Container = (props)=>{
     const handleOpenContainer = ()=>{
-        console.log("clicked")
+        var config = {
+            method: 'get',
+            url: 'http://localhost:3000/getlogs?cid='+props.id,
+            headers: {},
+          };
+          
+          axios(config)
+          .then(function (response) {
+            console.log(response.data.data);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });         
+        console.log("clicked",props.id)
     }
 
     return (
@@ -11,7 +24,8 @@ const Container = (props)=>{
                  <div>{props.id}</div>   
                  <div>{props.temp}</div>   
                  <div>{props.lat}</div>   
-                 <div>{props.long}</div>   
+                 <div>{props.long}</div> 
+                 <div>{props.time}</div>  
         </div>
     )
 }

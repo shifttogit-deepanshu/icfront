@@ -5,7 +5,7 @@ import Container from "./Container"
 const Containers = (props)=>{
     return (
         <div>
-            {props.containers.map(container=><Container id={container._id} temp={container.temp} lat={container.lat} long={container.long} key={container._id} />)}
+            {props.containers.map(container=><Container id={container._id} temp={container.temp} lat={container.lat} long={container.long} time={container.timeStamp} key={container._id} />)}
         </div>
     )
 }
