@@ -45,16 +45,29 @@
 // export default App;
 
 import React from "react"
-import axios from "axios"
 import LoginForm from "./components/LoginForm"
+import GetContainers from "./components/GetContainers"
+import Containers from "./components/Containers"
+import {connect} from "react-redux"
 
 
-
-
-const App = ()=>{
+const App = (props)=>{
  
   return (
+    <div>
     <LoginForm />
+    {props.uid===0 && <div>Please Login To continue</div>}
+        {props.uid===-1 && <div>Auth failed Please check credentials and try again</div>}
+        {(props.uid!==0 && props.uid!==-1) && <div><div>Authenticated!!</div><div><GetContainers/></div></div>}
+    <Containers />
+        </div>
   )
 }
-export default App
+
+const mapStateToProps = (state)=>{
+  return ({
+      uid:state.users.uid
+  })
+}
+
+export default connect(mapStateToProps)(App)

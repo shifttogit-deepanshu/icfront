@@ -45,17 +45,8 @@ const LoginForm = (props)=>{
         </label>
         <input type="submit" value="Submit" onClick={(e)=>handleSubmit(e)}/>
         </form>
-        {props.uid===0 && <div>Please Login To continue</div>}
-        {props.uid===-1 && <div>Auth failed Please check credentials and try again</div>}
-        {(props.uid!==0 && props.uid!==-1) && <div>Authenticated!!</div>}
         </div>
     )
-}
-
-const mapStateToProps = (state)=>{
-    return ({
-        uid:state.users.uid
-    })
 }
 
 const mapDispatchToProps = (dispatch)=>{
@@ -63,4 +54,4 @@ const mapDispatchToProps = (dispatch)=>{
         setuid: (uid)=>dispatch(setuid(uid))
     })
 }
-export default connect(mapStateToProps,mapDispatchToProps)(LoginForm)
+export default connect(undefined,mapDispatchToProps)(LoginForm)

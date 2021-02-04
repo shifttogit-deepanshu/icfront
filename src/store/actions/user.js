@@ -1,4 +1,5 @@
 export const SET_UID = "SET_UID"
+export const SET_CONTAINERS = "SET_CONTAINERS"
 
 export const setuid = (uid)=>(
     {
@@ -6,3 +7,8 @@ export const setuid = (uid)=>(
         uid:uid
     }
 )
+
+export const setContainers = (containers)=>({
+    type:SET_CONTAINERS,
+    containers:containers
+})
