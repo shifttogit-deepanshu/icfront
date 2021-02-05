@@ -14,15 +14,15 @@ const Container = (props)=>{
               
               axios(config)
               .then(function (response) {
-                console.log(response.data.data);
+                // console.log(response.data.data);
                 props.setLogs(response.data.data)
               })
               .catch(function (error) {
-                console.log(error);
+                // console.log(error);
               }); 
         },1000)
                 
-        console.log("clicked",props.id)
+        // console.log("clicked",props.id)
     }
 
     return (

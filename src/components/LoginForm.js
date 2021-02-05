@@ -22,11 +22,11 @@ const LoginForm = (props)=>{
 
         axios(config)
         .then(function (response) {
-        console.log(response.data);
+        // console.log(response.data);
         props.setuid(response.data.uid)
         })
         .catch(function (error) {
-        console.log(error);
+        // console.log(error);
         props.setuid(-1)
         });
 

@@ -49,7 +49,8 @@ import LoginForm from "./components/LoginForm"
 import GetContainers from "./components/GetContainers"
 import Containers from "./components/Containers"
 import {connect} from "react-redux"
-
+import TempChart from "./components/TempChart"
+import Map from "./components/Map"
 
 const App = (props)=>{
  
@@ -60,6 +61,8 @@ const App = (props)=>{
         {props.uid===-1 && <div>Auth failed Please check credentials and try again</div>}
         {(props.uid!==0 && props.uid!==-1) && <div><div>Authenticated!!</div><div><GetContainers/></div></div>}
     <Containers />
+    <TempChart />
+    <Map />
         </div>
   )
 }

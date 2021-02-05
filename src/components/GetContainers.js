@@ -21,10 +21,10 @@ const GetContainers = (props)=>{
 
     axios(config)
     .then(function (response) {
-    console.log(response.data)
+    // console.log(response.data)
     const containers = response.data.containers;
     props.setContainers(containers)
-    console.log(containers)
+    // console.log(containers)
     })
     .catch(function (error) {
     console.log(error);
