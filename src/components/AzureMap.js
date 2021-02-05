@@ -1,5 +1,5 @@
 import React from 'react'
-import {AzureMap, AzureMapHtmlMarker, AzureMapsProvider} from 'react-azure-maps'
+import {AzureMap, AzureMapHtmlMarker, AzureMapPopup, AzureMapsProvider} from 'react-azure-maps'
 import {AuthenticationType} from 'azure-maps-control'
 
 
@@ -21,6 +21,7 @@ const DefaultMap = (props) => {
         <AzureMapsProvider>
             <AzureMap options={option} style={{width:'100%'}}>
             <AzureMapHtmlMarker options={{position:[props.lat, props.long],color:"red"}}/>
+            <AzureMapPopup options={{position:[props.lat, props.long],content:"container is here"}}/>
             </AzureMap>
             
         </AzureMapsProvider>

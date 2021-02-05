@@ -51,6 +51,8 @@ import Containers from "./components/Containers"
 import {connect} from "react-redux"
 import TempChart from "./components/TempChart"
 import Map from "./components/Map"
+import TempMeterPos from "./components/TempMeterPos"
+import TempMeterNeg from "./components/TempMeterNeg.js"
 
 const App = (props)=>{
  
@@ -63,6 +65,8 @@ const App = (props)=>{
     <Containers />
     <TempChart />
     <Map />
+    <TempMeterPos />
+    <TempMeterNeg />
         </div>
   )
 }
