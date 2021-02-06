@@ -2,6 +2,7 @@ import React,{useState} from "react"
 import axios from "axios"
 import { connect } from 'react-redux'
 import {setuid} from "../store/actions/user"
+import img from "../images/avtarweb.png"
 
 const LoginForm = (props)=>{
     const [username,setUsername] = useState('')
@@ -33,18 +34,14 @@ const LoginForm = (props)=>{
       }
 
     return (
-        <div>
-        <form>
-        <label>
-            username:
+        <div className="loginform"> 
+            <div className="img"><img src={img} /></div>     
+            <div className="loginform__title">LOGIN</div>  
             <input type="text" name="username" value={username} onChange={(event)=>setUsername(event.target.value)}/>
-        </label>
-        <label>
-            password:
             <input type="text" name="password" value={password} onChange={(event)=>setPassword(event.target.value)}/>
-        </label>
-        <input type="submit" value="Submit" onClick={(e)=>handleSubmit(e)}/>
-        </form>
+            <input className="button" type="submit" value="Submit" onClick={(e)=>handleSubmit(e)}/>
+            {props.uid===0 && <div className="login__message"><div className="login__message__title login__message__title--top">Please Authenticate !</div><div><span className="login__message__title">Note: </span>For Demo purpose, Login with username:<span className="login__message__title ">user@123</span> and password: <span className="login__message__title">user@123</span></div></div>}
+            {props.uid===-1 && <div className="login__message login__message--err"><div className="login__message__title login__message__title--top">Authentication failed :(</div><div><span className="login__message__title">Note: </span>For Demo purpose, Login with username:<span className="login__message__title ">user@123</span> and password: <span className="login__message__title">user@123</span></div></div>}
         </div>
     )
 }
@@ -54,4 +51,10 @@ const mapDispatchToProps = (dispatch)=>{
         setuid: (uid)=>dispatch(setuid(uid))
     })
 }
-export default connect(undefined,mapDispatchToProps)(LoginForm)
+
+const mapStateToProps = (state)=>{
+    return ({
+        uid:state.users.uid
+    })
+}
+export default connect(mapStateToProps,mapDispatchToProps)(LoginForm)

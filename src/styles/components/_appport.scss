@@ -1,0 +1,12 @@
+.app-port{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:90vh;
+    box-sizing: border-box;
+    background-color: $background;
+}
+.app-port__mainbox{
+    background-color: $background;
+    width:100%;
+}
