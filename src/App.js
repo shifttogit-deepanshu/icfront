@@ -10,17 +10,20 @@ import ShadowBox from "./components/ShadowBox"
 import Header from "./components/Header"
 import AppPort from "./components/AppPort"
 import Authenticated from "./components/Authenticated"
+import ContainerPort from "./components/ContainerPort"
 
 const App = (props)=>{
  
   return (
     <div>
     <Header />
-    <AppPort>
-    {(props.uid===0 || props.uid===-1) && <LoginForm /> }
-    {(props.uid!==0 && props.uid!==-1 && props.containers.length==0) && <Authenticated />}
-    </AppPort> 
     
+    {(props.uid===0 || props.uid===-1) && <AppPort><LoginForm /></AppPort> }
+    {(props.uid!==0 && props.uid!==-1 && props.containers.length==0) && <AppPort><Authenticated /></AppPort>}
+     
+    
+    {(props.uid!==0 && props.uid!==-1 && props.containers.length!==0) && <ContainerPort>
+      </ContainerPort>}
       </div>        
   )
 }
