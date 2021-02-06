@@ -36,7 +36,7 @@ const GetContainers = (props)=>{
 
     return (
         <div>
-            <button onClick={()=>handleGetContainers()}>My containers</button>
+            <button className="button button--container" onClick={()=>handleGetContainers()}>Lets Go</button>
         </div>
     )
 }
