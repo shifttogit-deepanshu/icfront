@@ -16,7 +16,7 @@ const TempMeter = (props)=>{
         startAngle={props.startAngle} 
         endAngle={props.endAngle}
       >
-        <RadialBar label={{formatter:val=>{if(props.type){return val + " °C"}else{return "-" + val + " °C"}},position:'insideStart',fill:"white"}} dataKey='Temperature' />
+        <RadialBar background label={{formatter:val=>{if(props.type){return val + " °C"}else{return "-" + val + " °C"}},position:'insideStart',fill:"white"}} dataKey='Temperature' />
         <Tooltip formatter={(value,name)=>{if(props.type){return [value,"Temperature"]}else{return ["-"+value,"Temperature"]}}}/>
       </RadialBarChart>)
 }

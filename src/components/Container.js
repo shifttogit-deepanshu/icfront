@@ -33,9 +33,9 @@ const Container = (props)=>{
                  <div className="idhead">{props.id}</div>   
                  <div>{props.temp>=0 && <TempMeterPos temp={props.temp}/>}</div>
                  <div>{props.temp<0 && <TempMeterNeg temp={props.temp}/>}</div>  
-                 <div className="temp-highlight">{props.temp}</div>   
-                 <div>{props.lat}</div>   
-                 <div>{props.long}</div> 
+                 <div className="temp-highlight">{props.temp} °C</div>   
+                 <div className="lat-long">Latitude: <span className="lat-long--value">{props.lat}</span></div>   
+                 <div className="lat-long">Longitude: <span className="lat-long--value">{props.long}</span></div> 
                  <div className="containertime">{moment(props.time).format("Do MMM YYYY , HH:mm:ss:SS")}</div>  
         </div>
     )
