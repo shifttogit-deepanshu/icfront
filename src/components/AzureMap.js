@@ -5,27 +5,30 @@ import {AuthenticationType} from 'azure-maps-control'
 
 
 const DefaultMap = (props) => {
+    console.log(Number(props.containers[0].lat))
     const option= {
         authOptions: {
             authType: AuthenticationType.subscriptionKey,
             subscriptionKey: 'aMmhMWx0awFcGqoMl-qxVgFTAr834xX_nbwDf3twTEY'
         },
         style: 'grayscale_dark',
-        center: [props.lat, props.long],
-        zoom: 15,
+        center: [Number(props.containers[0].lat), Number(props.containers[0].long)],
+        zoom: 1,
         language: 'en-US',
         
     }
     return (
-    <div style={{height: '500px'}}>
+        
         <AzureMapsProvider>
-            <AzureMap options={option} style={{width:'100%'}}>
-            <AzureMapHtmlMarker options={{position:[props.lat, props.long],color:"red"}}/>
-            <AzureMapPopup options={{position:[props.lat, props.long],content:"container is here"}}/>
+            <AzureMap options={option} className="azure-maps">
+            {props.containers.map((container)=><AzureMapHtmlMarker key={container._id} options={{position:[Number(container.long), Number(container.lat)],color:"rgba(42, 187, 155, 1)",text:"<p style='color:rgba(42, 187, 155, 1);font-size:30px'>" + container._id + "<p>",secondaryColor:"white"}}/>)
+            
+                
+            }
             </AzureMap>
             
         </AzureMapsProvider>
-    </div>
+
 
 )
     }
