@@ -1,0 +1,32 @@
+.container{
+    margin:10px;
+    width:300px;
+    height:400px;
+    margin:10px;
+    background-color: $background;
+    box-shadow:$boxshadow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.idhead{
+    width:90%;
+    text-align: center;
+    color:$theme-color;
+    font-size:32px;
+    font-weight: 900;
+    border-bottom: 5px solid $theme-color;
+}
+.containertime{
+    width:90%;
+    border-top: 2px solid grey;
+    color:grey;
+    font-size: 14px;
+    text-align: center;
+}
+.temp-highlight{
+    font-size:32px;
+    color:$theme-color;
+}

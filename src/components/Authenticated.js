@@ -7,7 +7,7 @@ const Authenticated = ()=>{
         <div>
             <GetContainers/>
         </div>
-        <div className="login__message"><div className="login__message__title login__message__title--top">Authenticated Successfully !</div></div>
+        <div className="login__message login__message--success"><div className="login__message__title login__message__title--top">Authentication Successful !</div></div>
         </div>
     )
 }

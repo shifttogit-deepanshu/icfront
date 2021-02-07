@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
     "azure-maps-control": "^2.0.31",
+    "moment": "^2.29.1",
     "normalize.css": "^8.0.1",
     "react": "^17.0.1",
     "react-azure-maps": "^0.1.4",

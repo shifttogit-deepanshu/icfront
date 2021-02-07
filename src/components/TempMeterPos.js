@@ -1,21 +1,21 @@
 import React from "react"
 import TempMeter from "./TempMeter"
 
-const TempMeterPos = ()=>{
+const TempMeterPos = (props)=>{
     const data = [
         {
-          "name": "35-39",
-          "temp": 100,
+          "name": "",
+          "Temperature": 100,
           "fill": "white"
         },
         {
           "name": "Temperature",
-          "temp": 80,
-          "fill": "#ffc658"
+          "Temperature": props.temp,
+          "fill": "rgba(42, 187, 155, 1)"
         }
       ]
     return (
-        <TempMeter startAngle={0} endAngle={360} data={data}/>
+        <TempMeter startAngle={0} endAngle={360} data={data} type={1}/>
     )
 }
 
