@@ -26,7 +26,7 @@ const Container = (props)=>{
     }
 
     return (
-        <div style={{border:"2px solid black",margin:"10px"}} onClick={()=>handleOpenContainer()}>
+        <div style={{border:"2px solid black",margin:"10px",height:"400px"}} onClick={()=>handleOpenContainer()}>
                  <div>{props.id}</div>   
                  <div>{props.temp}</div>   
                  <div>{props.lat}</div>   

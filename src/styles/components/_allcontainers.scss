@@ -1,0 +1,15 @@
+.allcontainers{
+    animation-name:stretchport;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes stretchport {
+    from{
+        width:480px;
+        min-height:700px;
+    }
+    to{
+        width:90vw;
+        min-height:80vh;
+    }
+}

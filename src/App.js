@@ -11,6 +11,7 @@ import Header from "./components/Header"
 import AppPort from "./components/AppPort"
 import Authenticated from "./components/Authenticated"
 import ContainerPort from "./components/ContainerPort"
+import AllContainers from "./components/AllContainers"
 
 const App = (props)=>{
  
@@ -23,6 +24,7 @@ const App = (props)=>{
      
     
     {(props.uid!==0 && props.uid!==-1 && props.containers.length!==0) && <ContainerPort>
+        <AllContainers />
       </ContainerPort>}
       </div>        
   )

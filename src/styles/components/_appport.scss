@@ -3,25 +3,7 @@
     justify-content: center;
     align-items: center;
     min-height:90vh;
+    max-width:90vw;
     box-sizing: border-box;
     background-color: $background;
-}
-.app-port__mainbox--container{
-    animation-name:stretchport;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-.app-port__mainbox{
-    width:100%;
-}
-
-@keyframes stretchport {
-    from{
-        width:480px;
-        min-height:700px;
-    }
-    to{
-        width:95vw;
-        min-height:80vh;
-    }
 }
