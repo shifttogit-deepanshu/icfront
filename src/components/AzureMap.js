@@ -21,10 +21,7 @@ const DefaultMap = (props) => {
         
         <AzureMapsProvider>
             <AzureMap options={option} className="azure-maps">
-            {props.containers.map((container)=><AzureMapHtmlMarker key={container._id} options={{position:[Number(container.long), Number(container.lat)],color:"rgba(42, 187, 155, 1)",text:"<p style='color:rgba(42, 187, 155, 1);font-size:30px'>" + container._id + "<p>",secondaryColor:"white"}}/>)
-            
-                
-            }
+            {props.containers.map((container)=><AzureMapHtmlMarker key={container._id} options={{position:[Number(container.long), Number(container.lat)],color:"rgba(42, 187, 155, 1)",text:"<p style='color:rgba(42, 187, 155, 1)'>" + container._id + "<p>",secondaryColor:"white"}}/>)}
             </AzureMap>
             
         </AzureMapsProvider>

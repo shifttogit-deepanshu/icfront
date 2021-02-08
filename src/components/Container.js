@@ -8,7 +8,7 @@ import moment from "moment"
 
 const Container = (props)=>{
     const handleOpenContainer = ()=>{
-        setInterval(()=>{
+        // setInterval(()=>{
             var config = {
                 method: 'get',
                 url: 'http://localhost:3000/getlogs?cid='+props.id,
@@ -17,13 +17,14 @@ const Container = (props)=>{
               
               axios(config)
               .then(function (response) {
+                  console.log(response.data[0])
                 // console.log(response.data.data);
-                props.setLogs(response.data.data)
+                props.setLogs(response.data[0])
               })
               .catch(function (error) {
                 // console.log(error);
               }); 
-        },1000)
+        // },1000)
                 
         // console.log("clicked",props.id)
     }

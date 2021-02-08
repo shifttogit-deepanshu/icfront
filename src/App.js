@@ -18,10 +18,10 @@ const App = (props)=>{
     <Header />
     <AppPort>
     {(props.uid===0 || props.uid===-1) && <LoginForm /> }
-    {(props.uid!==0 && props.uid!==-1 && props.containers.length==0) &&<Authenticated />}
+    {(props.uid!==0 && props.uid!==-1 && Object.keys(props.containers).length==0) &&<Authenticated />}
      
     
-    {(props.uid!==0 && props.uid!==-1 && props.containers.length!==0) &&<AllContainers />}
+    {(props.uid!==0 && props.uid!==-1 && Object.keys(props.containers).length!==0) &&<AllContainers />}
     </AppPort>
       </div>        
   )
