@@ -8,7 +8,7 @@ const TempChart =(props) =>{
     console.log("the data",data)
     return (
       <div className="container-graph">
-    <LineChart width={480} height={380} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
+    <LineChart width={600} height={380} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
     <Line type="monotone" dataKey="temp" stroke="rgba(42, 187, 155, 1)" isAnimationActive={false} strokeWidth={3}/>
     <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
     <XAxis dataKey="_id" scale="time" allowDataOverflow={true} tickFormatter={(val)=>moment(val).format("D/M/YY H:m:s")}/>

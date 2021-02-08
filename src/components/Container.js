@@ -8,7 +8,7 @@ import moment from "moment"
 
 const Container = (props)=>{
     const handleOpenContainer = ()=>{
-        // setInterval(()=>{
+        setInterval(()=>{
             var config = {
                 method: 'get',
                 url: 'http://localhost:3000/getlogs?cid='+props.id,
@@ -24,7 +24,7 @@ const Container = (props)=>{
               .catch(function (error) {
                 // console.log(error);
               }); 
-        // },1000)
+        },1000)
                 
         // console.log("clicked",props.id)
     }

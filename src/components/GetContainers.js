@@ -7,7 +7,7 @@ const GetContainers = (props)=>{
     const handleGetContainers = ()=>{
     
     
-    // setInterval(() => {
+    setInterval(() => {
         var data = JSON.stringify({"uid":props.uid});
 
         var config = {
@@ -29,7 +29,7 @@ const GetContainers = (props)=>{
     .catch(function (error) {
     console.log(error);
     });
-    // }, 1000);
+    }, 1000);
         
     }
 
