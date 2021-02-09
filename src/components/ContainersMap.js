@@ -3,15 +3,16 @@ import AzureMap from "./AzureMap"
 import {connect} from "react-redux"
 
 const Map = (props)=>{
-    console.log(props.containers)
     return (
         <div className="containers-maps">
-        <AzureMap containers={props.containers}/>
+        {Object.keys(props.container).length===0 && <AzureMap containers={props.containers}/>}
+        {Object.keys(props.container).length!==0 && <AzureMap containers={[props.container.data[props.container.data.length-1]]}/>}
         </div>
     )
 }
 const mapStateToProps = (state)=>{
     return ({
+        container: state.containers,
         containers: state.users.containers
     })
 }

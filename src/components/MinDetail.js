@@ -13,7 +13,7 @@ const MaxDetail = (props)=>{
         const min = Math.min(...tempArr)
         setMaxTemp(min)
         console.log(min)
-    })
+    },[props.containers.data])
     
     return (
         <div className="detail">

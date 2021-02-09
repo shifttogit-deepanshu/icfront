@@ -1,11 +1,11 @@
 import React from 'react'
-import {AzureMap, AzureMapHtmlMarker, AzureMapPopup, AzureMapsProvider} from 'react-azure-maps'
+import {AzureMap, AzureMapHtmlMarker, AzureMapsProvider} from 'react-azure-maps'
 import {AuthenticationType} from 'azure-maps-control'
 
 
 
 const DefaultMap = (props) => {
-    console.log(Number(props.containers[0].lat))
+    // console.log(Number(props.containers[0].lat))
     const option= {
         authOptions: {
             authType: AuthenticationType.subscriptionKey,

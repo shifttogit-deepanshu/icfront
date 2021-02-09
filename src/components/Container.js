@@ -26,7 +26,7 @@ const Container = (props)=>{
               }); 
         },1000)
                 
-        // console.log("clicked",props.id)
+        console.log("clicked",props.id)
     }
 
     return (

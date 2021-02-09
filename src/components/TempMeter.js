@@ -8,7 +8,7 @@ const TempMeter = (props)=>{
           
         
         <RadialBarChart 
-        width={730} 
+        width={500} 
         height={250} 
         innerRadius="20%" 
         outerRadius="100%" 

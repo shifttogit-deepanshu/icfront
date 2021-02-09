@@ -9,7 +9,7 @@ const MinDetail = (props)=>{
         const tempArr = []
         props.containers.data.forEach((indata)=>{
             tempArr.push(indata.temp)
-        })
+        },[props.containers.data])
         const max = Math.max(...tempArr)
         setMaxTemp(max)
         console.log(max)
