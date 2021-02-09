@@ -11,7 +11,7 @@ const Container = (props)=>{
         setInterval(()=>{
             var config = {
                 method: 'get',
-                url: 'http://localhost:3000/getlogs?cid='+props.id,
+                url: 'https://backic.azurewebsites.net/getlogs?cid='+props.id,
                 headers: {},
               };
               
@@ -24,7 +24,7 @@ const Container = (props)=>{
               .catch(function (error) {
                 // console.log(error);
               }); 
-        },1000)
+        },10000)
                 
         console.log("clicked",props.id)
     }
