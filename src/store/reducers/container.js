@@ -3,7 +3,7 @@ import {SET_LOGS} from "../actions/container"
 
 const initiaState = {}
 
-export default (state=initiaState,action)=>{
+export const containerReducer = (state=initiaState,action)=>{
     switch(action.type){
         case SET_LOGS:
             return action.logs
@@ -11,3 +11,5 @@ export default (state=initiaState,action)=>{
             return state
     }
 }
+
+export default containerReducer

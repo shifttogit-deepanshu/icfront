@@ -36,7 +36,7 @@ const LoginForm = (props)=>{
 
     return (
         <div className="loginform"> 
-            <div className="img"><img src={img} alt="image logo"/></div>     
+            <div className="img"><img src={img} alt="logo"/></div>     
             <div className="loginform__title">LOGIN</div>  
             <input type="text" name="username" value={username} onChange={(event)=>setUsername(event.target.value)}/>
             <input type="text" name="password" value={password} onChange={(event)=>setPassword(event.target.value)}/>
