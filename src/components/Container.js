@@ -11,14 +11,13 @@ const Container = (props)=>{
         setInterval(()=>{
             var config = {
                 method: 'get',
-                url: 'https://backic.azurewebsites.net/getlogs?cid='+props.id,
+                url: 'http://localhost:3000/getlogs?cid='+props.id,
                 headers: {},
               };
               
               axios(config)
               .then(function (response) {
-                  console.log(response.data[0])
-                // console.log(response.data.data);
+                console.log("this...",response.data);
                 props.setLogs(response.data[0])
               })
               .catch(function (error) {
@@ -37,7 +36,7 @@ const Container = (props)=>{
                  <div className="temp-highlight">{props.temp} °C</div>   
                  <div className="lat-long">Latitude: <span className="lat-long--value">{props.lat}</span></div>   
                  <div className="lat-long">Longitude: <span className="lat-long--value">{props.long}</span></div> 
-                 <div className="containertime">{moment(props.time).format("Do MMM YYYY , HH:mm:ss:SS")}</div>  
+                 <div className="containertime">{moment(props.time).format("Do MMM YYYY , HH:mm:ss:SS")}</div>    
         </div>
     )
 }

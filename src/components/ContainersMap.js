@@ -1,12 +1,13 @@
 import React from "react"
 import AzureMap from "./AzureMap"
 import {connect} from "react-redux"
+import moment from "moment"
 
 const Map = (props)=>{
     return (
         <div className="containers-maps">
         {Object.keys(props.container).length===0 && <AzureMap containers={props.containers}/>}
-        {Object.keys(props.container).length!==0 && <AzureMap containers={[props.container.data[props.container.data.length-1]]}/>}
+        {Object.keys(props.container).length!==0 && <AzureMap containers={[props.container.data[props.container.data.length-1]]} alldata={props.container.data}/>}
         </div>
     )
 }

@@ -14,3 +14,22 @@ body{
     box-sizing: border-box;
     font-family:"Roboto";
 }
+.logo-img{
+  min-width:150px;
+  min-height:10px;
+}
+.pdfbutton{
+  background-color: $theme-color;
+  position:absolute;
+  bottom:0;
+  font-size:20px;
+  outline:none;
+  padding:10px 30px 10px 30px;
+  left:0;
+}
+.map-point{
+  width:15px;
+  height:15px;
+  background-color: $theme-color;
+  border-radius:50%;
+}
