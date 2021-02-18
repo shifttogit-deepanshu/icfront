@@ -1,7 +1,6 @@
 import React from "react"
 import AzureMap from "./AzureMap"
 import {connect} from "react-redux"
-import moment from "moment"
 
 const Map = (props)=>{
     return (

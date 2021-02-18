@@ -1,5 +1,5 @@
 import React from 'react'
-import {AzureMap, AzureMapFeature, AzureMapHtmlMarker, AzureMapsProvider} from 'react-azure-maps'
+import {AzureMap, AzureMapHtmlMarker, AzureMapsProvider} from 'react-azure-maps'
 import {AuthenticationType} from 'azure-maps-control'
 import moment from "moment"
 
