@@ -33,3 +33,17 @@ body{
   background-color: $theme-color;
   border-radius:50%;
 }
+
+footer{
+  height:50px;
+  width:100%;
+  background-color: darken($theme-color,10%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  color:white;
+}
+

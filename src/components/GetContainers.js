@@ -19,7 +19,7 @@ const GetContainers = (props)=>{
 
         var config = {
     method: 'post',
-    url: 'http://localhost:3000/getcontainers',
+    url: 'https://backic.azurewebsites.net/getcontainers',
     headers: { 
         'Content-Type': 'application/json'
     },

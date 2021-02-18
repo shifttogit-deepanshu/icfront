@@ -10,10 +10,9 @@
     
 }
 
-.logo{
-    position: absolute;
-    top:10px;
+.medi-logo{
     left:10px;
+    width:300px;
 }
 
 .title{
@@ -26,4 +25,23 @@
 }
 .title__port{
     color:$theme-color;
+}
+
+.bot{
+    background-color: $theme-color;
+    font-size: 20px;
+    padding:10px 40px 10px 40px;
+    position: absolute;
+    top:10px;
+    right:10px;
+    box-shadow: $boxshadow;
+    outline: none;
+
+}
+.bot:hover{
+    font-size:30px;
+    transition-duration: 1s;
+}
+a:visited{
+    color:black;
 }

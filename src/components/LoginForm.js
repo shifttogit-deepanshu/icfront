@@ -17,7 +17,7 @@ const LoginForm = (props)=>{
 
         var config = {
         method: 'post',
-        url: 'http://localhost:3000/authuser',
+        url: 'https://backic.azurewebsites.net/authuser',
         headers: { 
             'Content-Type': 'application/json'
         },
